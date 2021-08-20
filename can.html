@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rwed</title>
+</head>
+<body>
+<lable for="weight">Your Weight</lable>
+<input type="number" id="weight" value="" placeholder="60">
+<lable for="height">Your Height</lable>
+<input type="number" id="height" value="" placeholder="1.70">
+<button onclick="ac()" > Kiểm Tra</button>
+<p id="out"></p>
+
+<script>
+    function  ac(){
+    let can = document.getElementById('weight').value
+    let cao = document.getElementById('height').value
+    let BMI = can / (cao * cao)
+    if (BMI < 18) document.getElementById('out').innerHTML='Underweight'
+    else if (BMI < 25) document.getElementById('out').innerHTML='Normal'
+    else if (BMI < 30) document.getElementById('out').innerHTML='Overweight'
+    else document.getElementById('out').innerHTML='Obese'
+    }
+</script>
+</body>
+</html>
